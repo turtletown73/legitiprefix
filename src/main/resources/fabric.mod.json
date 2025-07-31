@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "legitiprefix",
+	"version": "${version}",
+	"name": "LegitiPrefix",
+	"description": "LegitiPrefix LegitiAll your LegitiWords in your LegitiMessages for no LegitiReason",
+	"authors": [
+		"GetCmdRolled"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-2.0",
+	"icon": "assets/legitiprefix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.scoobis.LegitiPrefix"
+		],
+		"modmenu": [
+			"net.scoobis.ModMenuImpl"
+		]
+	},
+	"mixins": [
+		"legitiprefix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": ">=1.21.7",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
