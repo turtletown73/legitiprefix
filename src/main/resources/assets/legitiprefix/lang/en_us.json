@@ -1,5 +1,21 @@
 {
     "text.autoconfig.legitiprefix.title": "LegitiPrefix LegitiConfig",
     "text.autoconfig.legitiprefix.option.LegitiEnabled": "LegitiEnabled",
-    "text.autoconfig.legitiprefix.option.LegitiPascalCase": "LegitiPascalCase"
+    "text.autoconfig.legitiprefix.option.LegitiPascalCase": "LegitiPascalCase",
+    "text.autoconfig.legitiprefix.option.LegitiPrefix": "LegitiPrefix",
+    "text.autoconfig.legitiprefix.category.General": "LegitiGeneral",
+    "text.autoconfig.legitiprefix.category.Types": "LegitiWordTypes",
+    "text.autoconfig.legitiprefix.option.LegitiForceAllTypes": "LegitiForceAllTypes",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixNouns": "LegitiPrefixNouns",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixAdjectives": "LegitiPrefixAdjectives",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixVerbs": "LegitiPrefixVerbs",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixAdverbs": "LegitiPrefixAdverbs",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixDeterminers": "LegitiPrefixDeterminers",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixPronouns": "LegitiPrefixPronouns",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixPrepositions": "LegitiPrefixPrepositions",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixParticles": "LegitiPrefixParticles",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixConjunctions": "LegitiPrefixConjunctions",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixModals": "LegitiPrefixModals",
+    "text.autoconfig.legitiprefix.option.LegitiPrefixMisc": "LegitiPrefixMisc",
+    "text.autoconfig.legitiprefix.option.LegitiCustomBlacklist": "LegitiCustomBlacklist"
 }

@@ -7,6 +7,8 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import opennlp.tools.postag.POSModel;
 import opennlp.tools.postag.POSTaggerME;
+import opennlp.tools.tokenize.TokenizerME;
+import opennlp.tools.tokenize.TokenizerModel;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,8 +27,10 @@ public class LegitiPrefix implements ModInitializer {
 	public static ConfigHolder<LegitiPrefixConfig> CONFIG;
 
 	private InputStream modelIn;
-	private POSModel model;
+	private POSModel posModel;
 	public static POSTaggerME TAGGER;
+	private TokenizerModel tokenModel;
+	public static TokenizerME TOKENIZER;
 
 	@Override
 	public void onInitialize() {
@@ -36,8 +40,12 @@ public class LegitiPrefix implements ModInitializer {
 
 		try {
 			modelIn = LegitiPrefix.class.getClassLoader().getResourceAsStream("assets/legitiprefix/opennlp-models/en-pos.bin");
-			model = new POSModel(modelIn);
-			TAGGER = new POSTaggerME(model);
+			posModel = new POSModel(modelIn);
+			TAGGER = new POSTaggerME(posModel);
+
+			modelIn = LegitiPrefix.class.getClassLoader().getResourceAsStream("assets/legitiprefix/opennlp-models/en-token.bin");
+			tokenModel = new TokenizerModel(modelIn);
+			TOKENIZER = new TokenizerME(tokenModel);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
