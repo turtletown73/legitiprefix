@@ -33,6 +33,7 @@ public class LegitiMixin {
 			List<String> blacklist = Arrays.asList(LegitiPrefix.CONFIG.get().LegitiCustomBlacklist);
 
 			String[] tokens = LegitiPrefix.TOKENIZER.tokenize(content);
+			if (tokens.length == 0) return content;
 			String[] tags = LegitiPrefix.TAGGER.tag(tokens);
 			String outString = "";
 			String prefix = LegitiPrefix.CONFIG.get().LegitiPrefix.toLowerCase();
@@ -42,13 +43,14 @@ public class LegitiMixin {
 					exception = exception || tokens[i - 1].toLowerCase().equals("an");
 				}
 
-				if (exception || !(whitelist.contains(tags[i]) || LegitiPrefix.CONFIG.get().LegitiForceAllTypes)) {
+				if ((exception || !(whitelist.contains(tags[i]))) && !LegitiPrefix.CONFIG.get().LegitiForceAllTypes) {
 					if (i == 0) {
 						outString = outString + tokens[i];
 					} else {
 						outString = outString + " " + tokens[i];
 					}
-				} else if (LegitiPrefix.CONFIG.get().LegitiPascalCase) {
+				} else if (LegitiPrefix.CONFIG.get().LegitiPrefix == "") outString = outString + Character.toUpperCase(tokens[i].charAt(0)) + tokens[i].substring(1).toLowerCase();
+				else if (LegitiPrefix.CONFIG.get().LegitiPascalCase) {
 					if (i == 0) {
 						outString = outString + Character.toUpperCase(prefix.charAt(0)) + prefix.substring(1).toLowerCase() + Character.toUpperCase(tokens[i].charAt(0)) + tokens[i].substring(1).toLowerCase();
 					} else {
