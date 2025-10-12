@@ -17,5 +17,6 @@
     "text.autoconfig.legitiprefix.option.LegitiPrefixConjunctions": "LegitiPrefixConjunctions",
     "text.autoconfig.legitiprefix.option.LegitiPrefixModals": "LegitiPrefixModals",
     "text.autoconfig.legitiprefix.option.LegitiPrefixMisc": "LegitiPrefixMisc",
-    "text.autoconfig.legitiprefix.option.LegitiCustomBlacklist": "LegitiCustomBlacklist"
+    "text.autoconfig.legitiprefix.option.LegitiCustomBlacklist": "LegitiCustomBlacklist",
+    "text.autoconfig.legitiprefix.option.LegitiCustomWhitelist": "LegitiCustomWhitelist"
 }

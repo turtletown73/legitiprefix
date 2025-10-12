@@ -14,6 +14,8 @@ public class LegitiPrefixConfig implements ConfigData {
     public String LegitiPrefix = "legiti";
     @ConfigEntry.Category("General")
     public String[] LegitiCustomBlacklist = new String[] {"have", "has", "had", "do", "does", "did", "can", "could", "will", "would", "shall", "should", "might", "must", "be", "am", "is", "are", "was", "were", "being", "there", "theres", "on"};
+    @ConfigEntry.Category("General")
+    public String[] LegitiCustomWhitelist = new String[] {};
 
     @ConfigEntry.Category("Types")
     public boolean LegitiForceAllTypes = false;

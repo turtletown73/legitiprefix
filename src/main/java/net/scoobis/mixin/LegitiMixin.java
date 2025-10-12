@@ -30,6 +30,8 @@ public class LegitiMixin {
 			if (LegitiPrefix.CONFIG.get().LegitiPrefixModals) whitelist.addAll(Set.of("MD"));
 			if (LegitiPrefix.CONFIG.get().LegitiPrefixMisc) whitelist.addAll(Set.of("INTJ"));
 
+			List<String> customWhitelist = Arrays.asList(LegitiPrefix.CONFIG.get().LegitiCustomWhitelist);
+
 			List<String> blacklist = Arrays.asList(LegitiPrefix.CONFIG.get().LegitiCustomBlacklist);
 
 			String[] tokens = LegitiPrefix.TOKENIZER.tokenize(content);
@@ -43,7 +45,7 @@ public class LegitiMixin {
 					exception = exception || tokens[i - 1].toLowerCase().equals("an");
 				}
 
-				if ((exception || !(whitelist.contains(tags[i]))) && !LegitiPrefix.CONFIG.get().LegitiForceAllTypes) {
+				if ((exception || !(whitelist.contains(tags[i]) || customWhitelist.contains(tokens[i]))) && !LegitiPrefix.CONFIG.get().LegitiForceAllTypes) {
 					if (i == 0) {
 						outString = outString + tokens[i];
 					} else {
